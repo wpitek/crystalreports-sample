@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrystalSample.WinForms", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrystalSample.Wpf", "CrystalSample.Wpf\CrystalSample.Wpf.csproj", "{521A5A30-EDC2-47EE-9B66-37B1D106B7F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrystalSample.NancyFx", "CrystalSample.NancyFx\CrystalSample.NancyFx.csproj", "{D08443D0-E60B-4088-B8E4-2284D863341E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{521A5A30-EDC2-47EE-9B66-37B1D106B7F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{521A5A30-EDC2-47EE-9B66-37B1D106B7F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{521A5A30-EDC2-47EE-9B66-37B1D106B7F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D08443D0-E60B-4088-B8E4-2284D863341E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D08443D0-E60B-4088-B8E4-2284D863341E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D08443D0-E60B-4088-B8E4-2284D863341E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D08443D0-E60B-4088-B8E4-2284D863341E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
