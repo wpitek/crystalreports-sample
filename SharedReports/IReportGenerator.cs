@@ -8,5 +8,6 @@ namespace SharedReports
     public interface IReportGenerator
     {
         ReportDocument GenerateReport(ReportDocument report, IDictionary<string, object> parameters = null, DataSet mainDataSet=null);
+        ReportDocument GenerateReport<T>(ReportDocument report, IEnumerable<T> classList);
     }
 }

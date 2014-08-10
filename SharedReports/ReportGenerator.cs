@@ -7,7 +7,7 @@ namespace SharedReports
 {
     public class ReportGenerator : IReportGenerator
     {
-        public ReportDocument GenerateReport(ReportDocument report, IDictionary<string, object> parameters = null, DataSet mainDataSet=null)
+        public ReportDocument GenerateReport(ReportDocument report, IDictionary<string, object> parameters = null, DataSet mainDataSet = null)
         {
             if (report == null)
                 throw new ArgumentException("Report cannot be null");
@@ -16,7 +16,13 @@ namespace SharedReports
             return report;
         }
 
-
+        public ReportDocument GenerateReport<T>(ReportDocument report, IEnumerable<T> classList)
+        {
+            if (report == null)
+                throw new ArgumentException("Report cannot be null");
+                report.SetDataSource(classList);
+            return report;
+        }
 
         private static void AddParametersToReport(ReportDocument report, IDictionary<string, object> parameters)
         {
@@ -36,5 +42,8 @@ namespace SharedReports
                 report.SetDataSource(dataSet);
             }
         }
+
+
+
     }
 }
