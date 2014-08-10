@@ -1,6 +1,6 @@
 ﻿namespace CrystalSample.WinForms
 {
-    partial class MainForm
+    partial class ReportViewer
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.HelloWorlButton = new System.Windows.Forms.Button();
+            this.viewer = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
             // 
-            // HelloWorlButton
+            // viewer
             // 
-            this.HelloWorlButton.Location = new System.Drawing.Point(13, 13);
-            this.HelloWorlButton.Name = "HelloWorlButton";
-            this.HelloWorlButton.Size = new System.Drawing.Size(75, 23);
-            this.HelloWorlButton.TabIndex = 0;
-            this.HelloWorlButton.Text = "HelloWorld!";
-            this.HelloWorlButton.UseVisualStyleBackColor = true;
-            this.HelloWorlButton.Click += new System.EventHandler(this.HelloWorlButton_Click);
+            this.viewer.ActiveViewIndex = -1;
+            this.viewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.viewer.Cursor = System.Windows.Forms.Cursors.Default;
+            this.viewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewer.Location = new System.Drawing.Point(0, 0);
+            this.viewer.Name = "viewer";
+            this.viewer.Size = new System.Drawing.Size(784, 561);
+            this.viewer.TabIndex = 0;
             // 
-            // MainForm
+            // ReportViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.HelloWorlButton);
-            this.Name = "MainForm";
-            this.Text = "CrystalExample";
+            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.viewer);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
+            this.Name = "ReportViewer";
+            this.Text = "ReportViewer";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ReportViewer_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button HelloWorlButton;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer viewer;
+
     }
 }
-
