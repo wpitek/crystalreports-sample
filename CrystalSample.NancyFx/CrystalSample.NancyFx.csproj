@@ -79,6 +79,7 @@
     <Compile Include="HomeModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportResponse.cs" />
+    <Compile Include="DataModel\Model.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

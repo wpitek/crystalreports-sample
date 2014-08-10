@@ -1,4 +1,5 @@
 ﻿using CrystalDecisions.CrystalReports.Engine;
+using CrystalSample.NancyFx.DataModel;
 using Nancy;
 using Nancy.ModelBinding;
 using SharedReports;
@@ -6,18 +7,17 @@ using System.Collections.Generic;
 
 namespace CrystalSample.NancyFx
 {
-    public class HomeModule:NancyModule
+    public class HomeModule : NancyModule
     {
 
         public HomeModule()
         {
             Get["/"] = _ => View["Index"];
-            Get["HelloWorld"] = _ =>new ReportResponse(new HelloWorldReport());
-            Post["HelloYou"] = p =>
+            Get["HelloWorld"] = _ => new ReportResponse(new HelloWorldReport());
+            Post["HelloYou"] = _ =>
                 {
-                    var z = this.Bind<Model>();
-                    var n = p.name;
-                    return new ReportResponse(HelloYouReport(p.name));
+                    var model = this.Bind<Model>();
+                    return new ReportResponse(HelloYouReport(model.Name));
                 };
         }
 
@@ -31,13 +31,8 @@ namespace CrystalSample.NancyFx
                 var report = generator.GenerateReport(new HelloYou(), parameters);
                 return report;
             }
-            else 
+            else
                 return new ReportDocument();
         }
-
-        public class Model
-        {
-            public string Name { get; set; }
-        }
-}
+    }
 }
