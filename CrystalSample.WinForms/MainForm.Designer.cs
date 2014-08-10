@@ -33,6 +33,7 @@
             this.MyName = new System.Windows.Forms.TextBox();
             this.People = new System.Windows.Forms.Button();
             this.Team = new System.Windows.Forms.Button();
+            this.Complex = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // HelloWorlButton
@@ -82,11 +83,22 @@
             this.Team.UseVisualStyleBackColor = true;
             this.Team.Click += new System.EventHandler(this.Team_Click);
             // 
+            // Complex
+            // 
+            this.Complex.Location = new System.Drawing.Point(13, 133);
+            this.Complex.Name = "Complex";
+            this.Complex.Size = new System.Drawing.Size(75, 23);
+            this.Complex.TabIndex = 5;
+            this.Complex.Text = "Complex";
+            this.Complex.UseVisualStyleBackColor = true;
+            this.Complex.Click += new System.EventHandler(this.Complex_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.Complex);
             this.Controls.Add(this.Team);
             this.Controls.Add(this.People);
             this.Controls.Add(this.MyName);
@@ -106,6 +118,7 @@
         private System.Windows.Forms.TextBox MyName;
         private System.Windows.Forms.Button People;
         private System.Windows.Forms.Button Team;
+        private System.Windows.Forms.Button Complex;
     }
 }
 
