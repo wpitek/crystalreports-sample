@@ -4,6 +4,8 @@ using Nancy;
 using Nancy.ModelBinding;
 using SharedReports;
 using System.Collections.Generic;
+using System.IO;
+using System.Web;
 
 namespace CrystalSample.NancyFx
 {
@@ -19,6 +21,7 @@ namespace CrystalSample.NancyFx
                     var model = this.Bind<Model>();
                     return new ReportResponse(HelloYouReport(model.Name));
                 };
+            Get["People"] = _ => new ReportResponse(GivePeopleReport());
         }
 
         private ReportDocument HelloYouReport(string name)
@@ -33,6 +36,19 @@ namespace CrystalSample.NancyFx
             }
             else
                 return new ReportDocument();
+        }
+
+        private ReportDocument GivePeopleReport()
+        {
+            var generator = new ReportGenerator();
+            var ds = new SampleDataSet();
+            var t = ds.Tables["People"];
+            ds.Tables["People"].Rows.Add("Jon", "Doe I");
+            ds.Tables["People"].Rows.Add("Jon", "Doe II");
+            ds.Tables["People"].Rows.Add("Jon", "Doe III");
+            ds.Tables["People"].Rows.Add("Jon", "Doe IV");
+            var report = generator.GenerateReport(new PeopleReport(), mainDataSet: ds);
+            return report;
         }
     }
 }
