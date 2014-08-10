@@ -4,5 +4,9 @@
         Title="CrystalExample" Height="350" Width="525">
     <StackPanel>
         <Button x:Name="HelloWorldButton" Content="Hello world" Click="HelloWorldButton_Click" />
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="HelloYoudButton" Content="Hello You" Click="HelloYoudButton_Click" />
+            <TextBox x:Name="MyName" Text="Please enter you Name!"/>
+        </StackPanel>
     </StackPanel>
 </Window>
