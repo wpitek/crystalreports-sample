@@ -70,6 +70,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SampleDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Team.cs" />
+    <Compile Include="TeamReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TeamReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="HelloWorldReport.rpt">
@@ -83,6 +90,10 @@
     <EmbeddedResource Include="PeopleReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PeopleReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeamReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TeamReport.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
