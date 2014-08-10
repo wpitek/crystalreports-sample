@@ -10,5 +10,6 @@
         </StackPanel>
         <Button x:Name="PeopleButton" Content="People" Click="PeopleButton_Click"/>
         <Button x:Name="TeamButton" Content="Teams" Click="TeamButton_Click"/>
+        <Button x:Name="ComplexButton" Content="Complex" Click="ComplexButton_Click"/>
     </StackPanel>
 </Window>

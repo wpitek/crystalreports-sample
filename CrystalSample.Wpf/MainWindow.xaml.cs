@@ -59,5 +59,30 @@ namespace CrystalSample.Wpf
             var report = _reportGenerator.GenerateReport(new TeamReport(), classList: teams);
             _reportViewer.LoadReport(report);
         }
+
+        private void ComplexButton_Click(object sender, RoutedEventArgs e)
+        {
+            var teams = new List<Team>();
+            var t1 = new Team { Name = "One team", StartDate = DateTime.Now };
+            var t2 = new Team { Name = "Two team", StartDate = DateTime.Now };
+            teams.Add(t1);
+            teams.Add(t2);
+
+            var ds = new SampleDataSet();
+            var t = ds.Tables["People"];
+            ds.Tables["People"].Rows.Add("Jon", "Doe I");
+            ds.Tables["People"].Rows.Add("Jon", "Doe II");
+            ds.Tables["People"].Rows.Add("Jon", "Doe III");
+            ds.Tables["People"].Rows.Add("Jon", "Doe IV");
+
+            var parameters = new Dictionary<string, object>();
+            parameters.Add("value", 666);
+
+            var report = _reportGenerator.GenerateReport(new MainReport(), parameters: parameters, mainDataSet: ds);
+            report.Subreports["SubReportOne.rpt"].SetDataSource(teams);
+            report.Subreports["SubReportTwo.rpt"].SetDataSource(ds);
+            report.SetParameterValue("value", 666);
+            _reportViewer.LoadReport(report);
+        }
     }
 }
