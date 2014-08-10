@@ -12,10 +12,10 @@ namespace CrystalSample.WinForms
             InitializeComponent();
         }
 
-        private void ReportViewer_Load(object sender, EventArgs e)
-        {
-            this.viewer.RefreshReport();
-        }
+        //private void ReportViewer_Load(object sender, EventArgs e)
+        //{
+        //    this.
+        //}
 
         public void LoadReport(ReportDocument report)
         {

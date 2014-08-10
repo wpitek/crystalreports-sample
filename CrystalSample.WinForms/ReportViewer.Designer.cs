@@ -52,7 +52,6 @@
             this.Name = "ReportViewer";
             this.Text = "ReportViewer";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.ReportViewer_Load);
             this.ResumeLayout(false);
 
         }
