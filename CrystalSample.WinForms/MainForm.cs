@@ -45,5 +45,16 @@ namespace CrystalSample.WinForms
             var report = _reportGenerator.GenerateReport(new PeopleReport(), mainDataSet: ds);
             _reportViewer.LoadReport(report);
         }
+
+        private void Team_Click(object sender, EventArgs e)
+        {
+            var teams = new List<Team>();
+            var t1 = new Team { Name = "One team", StartDate = DateTime.Now };
+            var t2 = new Team { Name = "Two team", StartDate = DateTime.Now };
+            teams.Add(t1);
+            teams.Add(t2);
+            var report = _reportGenerator.GenerateReport(new TeamReport(), classList: teams);
+            _reportViewer.LoadReport(report);
+        }
     }
 }

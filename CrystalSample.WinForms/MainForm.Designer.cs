@@ -32,6 +32,7 @@
             this.HelloYou = new System.Windows.Forms.Button();
             this.MyName = new System.Windows.Forms.TextBox();
             this.People = new System.Windows.Forms.Button();
+            this.Team = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // HelloWorlButton
@@ -71,11 +72,22 @@
             this.People.UseVisualStyleBackColor = true;
             this.People.Click += new System.EventHandler(this.People_Click);
             // 
+            // Team
+            // 
+            this.Team.Location = new System.Drawing.Point(13, 103);
+            this.Team.Name = "Team";
+            this.Team.Size = new System.Drawing.Size(75, 23);
+            this.Team.TabIndex = 4;
+            this.Team.Text = "Team";
+            this.Team.UseVisualStyleBackColor = true;
+            this.Team.Click += new System.EventHandler(this.Team_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.Team);
             this.Controls.Add(this.People);
             this.Controls.Add(this.MyName);
             this.Controls.Add(this.HelloYou);
@@ -93,6 +105,7 @@
         private System.Windows.Forms.Button HelloYou;
         private System.Windows.Forms.TextBox MyName;
         private System.Windows.Forms.Button People;
+        private System.Windows.Forms.Button Team;
     }
 }
 
