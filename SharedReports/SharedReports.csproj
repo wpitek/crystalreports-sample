@@ -49,6 +49,12 @@
       <DependentUpon>HelloWorldReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="HelloYou.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HelloYou.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="IReport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -56,6 +62,10 @@
     <EmbeddedResource Include="HelloWorldReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>HelloWorldReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelloYou.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HelloYou.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
