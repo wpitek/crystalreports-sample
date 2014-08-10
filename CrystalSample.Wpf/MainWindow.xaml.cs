@@ -32,7 +32,7 @@ namespace CrystalSample.Wpf
             {
                 var parameters = new Dictionary<string, object>();
                 parameters.Add("name", MyName.Text);
-                var report = _reportGenerator.GenerateReport(new HelloYou(), parameters);
+                var report = _reportGenerator.GenerateReport(new HelloYou(), parameters,null);
                 _reportViewer.LoadReport(report);
             }
         }

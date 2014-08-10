@@ -1,6 +1,7 @@
 ﻿using SharedReports;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Windows.Forms;
 
 namespace CrystalSample.WinForms
@@ -31,6 +32,18 @@ namespace CrystalSample.WinForms
                 var report = _reportGenerator.GenerateReport(new HelloYou(), parameters);
                 _reportViewer.LoadReport(report);
             }
+        }
+
+        private void People_Click(object sender, EventArgs e)
+        {
+            var ds=new SampleDataSet();
+            var t=ds.Tables["People"];
+            ds.Tables["People"].Rows.Add("Jon","Doe I");
+            ds.Tables["People"].Rows.Add("Jon","Doe II");
+            ds.Tables["People"].Rows.Add("Jon","Doe III");
+            ds.Tables["People"].Rows.Add("Jon","Doe IV");
+            var report = _reportGenerator.GenerateReport(new PeopleReport(), mainDataSet: ds);
+            _reportViewer.LoadReport(report);
         }
     }
 }
