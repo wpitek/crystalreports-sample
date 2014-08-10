@@ -8,5 +8,6 @@
             <Button x:Name="HelloYoudButton" Content="Hello You" Click="HelloYoudButton_Click" />
             <TextBox x:Name="MyName" Text="Please enter you Name!"/>
         </StackPanel>
+        <Button x:Name="PeopleButton" Content="People" Click="PeopleButton_Click"/>
     </StackPanel>
 </Window>
