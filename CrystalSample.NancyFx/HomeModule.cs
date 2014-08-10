@@ -1,4 +1,5 @@
 ﻿using Nancy;
+using SharedReports;
 
 namespace CrystalSample.NancyFx
 {
@@ -7,6 +8,7 @@ namespace CrystalSample.NancyFx
         public HomeModule()
         {
             Get["/"] = _ => View["Index"];
+            Get["HelloWorld"] = _ =>new ReportResponse(new HelloWorldReport());
         }
     }
 }
