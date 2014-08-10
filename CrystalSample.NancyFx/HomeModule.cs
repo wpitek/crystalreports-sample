@@ -6,7 +6,7 @@ namespace CrystalSample.NancyFx
     {
         public HomeModule()
         {
-            Get["/"] = _ => "Crystal example";
+            Get["/"] = _ => View["Index"];
         }
     }
 }
