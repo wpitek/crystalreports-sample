@@ -1,0 +1,9 @@
+﻿<Window x:Class="CrystalSample.Wpf.ReportViewer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cr="clr-namespace:SAPBusinessObjects.WPF.Viewer;assembly=SAPBusinessObjects.WPF.Viewer"
+        Title="ReportViewer" WindowState="Maximized">
+    <Grid>
+        <cr:CrystalReportsViewer x:Name="viewer" />
+    </Grid>
+</Window>

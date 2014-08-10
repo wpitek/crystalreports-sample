@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SharedReports;
+using System;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace CrystalSample.Wpf
 {
@@ -20,9 +10,16 @@ namespace CrystalSample.Wpf
     /// </summary>
     public partial class MainWindow : Window
     {
+        private IReport _reportViewer;
         public MainWindow()
         {
             InitializeComponent();
+            _reportViewer = new ReportViewer();
+        }
+
+        private void HelloWorldButton_Click(object sender, RoutedEventArgs e)
+        {
+            _reportViewer.LoadReport(new HelloWorldReport());
         }
     }
 }
