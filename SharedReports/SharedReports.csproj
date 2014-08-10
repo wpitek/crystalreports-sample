@@ -57,6 +57,12 @@
     </Compile>
     <Compile Include="IReport.cs" />
     <Compile Include="IReportGenerator.cs" />
+    <Compile Include="PeopleReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PeopleReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportGenerator.cs" />
     <Compile Include="SampleDataSet.Designer.cs">
@@ -73,6 +79,10 @@
     <EmbeddedResource Include="HelloYou.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>HelloYou.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeopleReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PeopleReport.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
