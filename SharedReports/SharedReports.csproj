@@ -56,7 +56,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="IReport.cs" />
+    <Compile Include="IReportGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="HelloWorldReport.rpt">
