@@ -11,10 +11,12 @@ namespace SharedReports
         {
             if (report == null)
                 throw new ArgumentException("Report cannot be null");
-            AddParametersToReport(report, parameters);
+            
             AddDataSet(report, mainDataSet);
+            AddParametersToReport(report, parameters);
             return report;
         }
+
 
         public ReportDocument GenerateReport<T>(ReportDocument report, IEnumerable<T> classList)
         {

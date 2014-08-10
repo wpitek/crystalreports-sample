@@ -57,6 +57,12 @@
     </Compile>
     <Compile Include="IReport.cs" />
     <Compile Include="IReportGenerator.cs" />
+    <Compile Include="MainReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="PeopleReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -69,6 +75,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SampleDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SubReportOne.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubReportOne.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubReportTwo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubReportTwo.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Team.cs" />
     <Compile Include="TeamReport.cs">
@@ -87,9 +105,21 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>HelloYou.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MainReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="PeopleReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PeopleReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubReportOne.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SubReportOne.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubReportTwo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SubReportTwo.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="TeamReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
