@@ -20,7 +20,7 @@ namespace CrystalSample.NancyFx
         {
             return stream =>
             {
-                report.ExportToHttpResponse(ExportFormatType.PortableDocFormat, HttpContext.Current.Response, false, report.Name);
+                report.ExportToHttpResponse(ExportFormatType.PortableDocFormat, HttpContext.Current.Response, false, string.Format("{0}.pdf",report.Name));
             };
         }
     }

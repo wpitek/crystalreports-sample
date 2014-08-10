@@ -11,8 +11,12 @@
 </head>
 <body>
     <h1>Crystal example</h1>
-    <div>
-        <a href="/HelloWorld" title="Hello World Report">Hello World</a>
-    </div>
+    <form action="/HelloWorld">
+    <input type="submit" value="Hello World">
+    </form>
+    <form action="/HelloYou" method="POST">
+        <input type="text" name="name" />
+        <button type="submit" >Hello You</button>
+    </form>
 </body>
 </html>
