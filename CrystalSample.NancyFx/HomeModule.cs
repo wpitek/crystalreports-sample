@@ -3,6 +3,7 @@ using CrystalSample.NancyFx.DataModel;
 using Nancy;
 using Nancy.ModelBinding;
 using SharedReports;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Web;
@@ -22,6 +23,19 @@ namespace CrystalSample.NancyFx
                     return new ReportResponse(HelloYouReport(model.Name));
                 };
             Get["People"] = _ => new ReportResponse(GivePeopleReport());
+            Get["Teams"] = _ => new ReportResponse(GiveTeamsReport());
+        }
+
+        private ReportDocument GiveTeamsReport()
+        {
+            var generator = new ReportGenerator();
+            var teams = new List<Team>();
+            var t1 = new Team { Name = "One team", StartDate = DateTime.Now };
+            var t2 = new Team { Name = "Two team", StartDate = DateTime.Now };
+            teams.Add(t1);
+            teams.Add(t2);
+            var report = generator.GenerateReport(new TeamReport(), classList: teams);
+            return report;
         }
 
         private ReportDocument HelloYouReport(string name)
